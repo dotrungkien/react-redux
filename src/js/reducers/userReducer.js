@@ -18,7 +18,12 @@ export default function reducer (state=initialState, action) {
       return {...state, fetching: false, error: action.payload}
     }
     case "FETCH_USER_FULFILLED": {
-      return {...state, fetching: false, fetched: true, user: action.payload}
+      return {
+        ...state,
+        fetching: false,
+        fetched: true,
+        user: action.payload
+      }
     }
     case "SET_USER_NAME": {
       return {

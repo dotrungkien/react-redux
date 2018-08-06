@@ -1,5 +1,10 @@
 const initialState = {
-  tweets: [],
+  tweets: [
+    // {
+    //   id: 1,
+    //   text: "cong hoa xa hoi chu nghia viet nam"
+    // }
+  ],
   fetching: false,
   fetched: false,
   error: null

@@ -8,7 +8,6 @@ import axios from 'axios'
 
 class Layout extends React.Component {
   componentWillMount () {
-    axios.post('http://rest.learncode.academy/api/reacttest/tweets',{id: 1, text: "WTF"})
     axios.post('http://rest.learncode.academy/api/reacttest/tweets',{id: 4, text: "aaaa"})
     this.props.fetchUser()
   }
@@ -23,7 +22,8 @@ class Layout extends React.Component {
     if (!tweets.length) {
       return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>
     }
-    const mappedTweets = tweets.map(tweet => <li>{tweet.text}</li>)
+
+    const mappedTweets = tweets.map(tweet => <li key={tweet.id}>{tweet.text}</li>)
 
     return <div>
         <h1>{user.name}</h1>
