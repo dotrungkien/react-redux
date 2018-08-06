@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function fetchTweets () {
   return function (dispatch) {
-    axios.get('https://rest.learncode.academy/api/test123/tweets')
+    axios.get('http://rest.learncode.academy/api/reacttest/tweets')
       .then((response) => {
         dispatch({type: "FETCH_TWEETS_FULFILLED", payload: response.data})
       })
