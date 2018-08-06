@@ -1,1 +1,1 @@
-# Simple Todo app
+# Simple react redux app
